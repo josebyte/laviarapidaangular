@@ -10,5 +10,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'laviarapidaangular';
+  title = 'Librería';
+  book = {
+    title: 'Angular 17 La vía rápida',
+    author: 'Joseba Madrigal',
+    price: 0
+  };
 }
