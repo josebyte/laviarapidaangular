@@ -2,7 +2,21 @@
   {{title}}
 </h1>
 
-<h2>{{book.title}}</h2>
+<h2>Libros:</h2>
 
-<p>Autor: {{book.author}}</p>
-<p>Precio: {{book.price}}€</p>
+<ul>
+  @for (book of books; track book.title; let i = $index) {
+    <li>
+      <h3>{{i}} {{book.title}} {{book.author}}</h3>
+
+      @if(book.price === 0){
+        <b>¡Gratis!</b>
+      }
+
+      <img [src]="'assets/book_images/'+book.image">
+
+      <a [href]="book.url">{{book.url}}</a>
+    </li>
+  }
+</ul>
+
